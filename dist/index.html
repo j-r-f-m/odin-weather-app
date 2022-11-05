@@ -2,22 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
-  <script defer src="bundle29cd6d92f0f36fc6f91e.js"></script></head>
+    <title>Weather</title>
+  <script defer src="bundle23a4560adc3c324cfc63.js"></script></head>
   <body>
     <div id="content">
       <div id="app-card">
-        <h1>Weather</h1>
+        <div id="header-card">
+          <div id="header-info">
+            <h2 id="weather-description">load data</h2>
+            <h1 id="city-name">load data</h1>
+          </div>
+          <div class="form">
+            <form action="" novalidate autocomplete="off">
+              <label for="search"></label>
+              <input
+                type="text"
+                name="search"
+                id="search-input"
+                placeholder="enter a city"
+                required
+              />
+            </form>
+            <button id="search-btn">Search</button>
+          </div>
+        </div>
+        <div id="body-card">
+          <div id="temperature">load data</div>
+          <div id="information">
+            <div id="feels-like">load data</div>
+            <div id="wind-speed">load data</div>
+            <div id="humidity">load data</div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- <button>New image</button>
-    <div class="form">
-      <form action="">
-        <label for="search">Search: </label>
-        <input type="text" name="search" id="search-input" />
-      </form>
-      <button id="search-btn">Start Search</button>
-    </div> -->
   </body>
 </html>
