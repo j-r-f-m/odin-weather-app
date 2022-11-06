@@ -33,6 +33,7 @@ const clearError = () => {
 
 /**
  * add eventlistener to search button
+ * start search on clicking button
  */
 const addSearch = () => {
   // get input
@@ -73,4 +74,4 @@ const inputEvent = () => {
   });
 };
 
-export { addSearch, inputEvent, clearError };
+export { addSearch, inputEvent, clearError, inputMessage };

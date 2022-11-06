@@ -8,9 +8,10 @@ const updateWeatherInformation = (weatherObj) => {
   // update weather description
   const weatherDescription = document.getElementById("weather-description");
   weatherDescription.textContent = weatherObj.description;
-  // update city name
+  // update city name and country
   const cityName = document.getElementById("city-name");
-  cityName.textContent = weatherObj.name;
+  cityName.textContent = `${weatherObj.name}, ${weatherObj.country}`;
+
   // update temprature
   const temprature = document.getElementById("temperature");
   temprature.textContent = `Temperature: ${weatherObj.temp} [°C]`;

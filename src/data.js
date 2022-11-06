@@ -1,4 +1,5 @@
 import { updateWeatherInformation } from "./update";
+import { inputMessage } from "./events";
 
 /**
  * get weather-obj from api
@@ -24,6 +25,10 @@ export async function getData(cityName) {
     // update dom
     updateWeatherInformation(cleanData);
   } catch (err) {
+    const input = document.getElementById("search-input");
+    input.value = "";
+    inputMessage(input, "Enter valid city name!");
+
     console.log(err);
   }
 }
@@ -47,6 +52,7 @@ const cleanWeatherData = (weatherObj) => {
   cleanDataObj.feels_like = weatherObj.main.feels_like;
   cleanDataObj.wind_speed = weatherObj.wind.speed;
   cleanDataObj.humidity = weatherObj.main.humidity;
+  cleanDataObj.country = weatherObj.sys.country;
 
   return cleanDataObj;
 };

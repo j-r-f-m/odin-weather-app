@@ -679,6 +679,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getData": () => (/* binding */ getData)
 /* harmony export */ });
 /* harmony import */ var _update__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./update */ "./src/update.js");
+/* harmony import */ var _events__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./events */ "./src/events.js");
+
 
 
 /**
@@ -705,6 +707,10 @@ async function getData(cityName) {
     // update dom
     (0,_update__WEBPACK_IMPORTED_MODULE_0__.updateWeatherInformation)(cleanData);
   } catch (err) {
+    const input = document.getElementById("search-input");
+    input.value = "";
+    (0,_events__WEBPACK_IMPORTED_MODULE_1__.inputMessage)(input, "Enter valid city name!");
+
     console.log(err);
   }
 }
@@ -746,7 +752,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "addSearch": () => (/* binding */ addSearch),
 /* harmony export */   "clearError": () => (/* binding */ clearError),
-/* harmony export */   "inputEvent": () => (/* binding */ inputEvent)
+/* harmony export */   "inputEvent": () => (/* binding */ inputEvent),
+/* harmony export */   "inputMessage": () => (/* binding */ inputMessage)
 /* harmony export */ });
 /* harmony import */ var prettier__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prettier */ "./node_modules/prettier/standalone.js");
 /* harmony import */ var prettier__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prettier__WEBPACK_IMPORTED_MODULE_0__);
@@ -993,4 +1000,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle23a4560adc3c324cfc63.js.map
+//# sourceMappingURL=bundle6b20cad957c0eb31d8bb.js.map
